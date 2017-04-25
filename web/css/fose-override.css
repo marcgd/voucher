@@ -1,0 +1,28 @@
+.auth {
+    background-color: #fff;
+    color: #000;
+    width: 300px;
+    margin: 20px auto 0;
+    text-align: center;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.auth a {
+    color: #000;
+    font-weight: bold;
+}
+
+.auth label {
+    font-weight: normal;
+    display: block;
+}
+
+.auth input {
+    margin: 0 auto 15px;
+}
+
+.auth #remember_me {
+    display: block;
+    margin-bottom: 0;
+}

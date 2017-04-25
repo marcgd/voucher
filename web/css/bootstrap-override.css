@@ -1,0 +1,32 @@
+h1,
+h2 {
+    margin-top: 0;
+}
+
+.btn-primary {
+    background-color: #5597cc;
+}
+
+a,
+a:focus, 
+a:hover,
+a:active {
+    color: #fff;
+}
+
+.navbar-inverse {
+    background-color: #fafafa;
+}
+
+.navbar-inverse a:hover,
+.navbar-inverse a:focus {
+    color: #333 !important;
+}
+
+.navbar-inverse .active a {
+    background-color: #9d9d9d !important;
+}
+
+legend {
+  color: #efefef;
+}

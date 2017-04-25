@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>{{ route | capitalize }} List</h2>
+    {% block beforegrid %}{% endblock %}
+    <div id="voucherGrid" data-backend="{{ route }}"></div>
+    {% block aftergrid %}{% endblock %}
+{% endblock %}

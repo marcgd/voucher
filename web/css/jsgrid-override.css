@@ -1,0 +1,21 @@
+.jsgrid {
+  color: black;
+  background-color: #efefef;
+  margin: 25px 0;
+}
+
+.jsgrid a {
+  color: #23527c;
+}
+
+.jsgrid-header-cell {
+  text-transform: capitalize;
+}
+
+.jsgrid-pager {
+  padding: .5em;
+}
+
+.jsgrid .jsgrid-insert-mode-button {
+  background-size: 80%;
+}

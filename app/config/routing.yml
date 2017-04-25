@@ -1,0 +1,33 @@
+voucher_index:
+    path:     /voucher
+    defaults: { _controller: "AppBundle:Voucher:index" }
+    methods:  GET
+
+voucher_list:
+    path:     /voucher/list
+    defaults: { _controller: "AppBundle:Voucher:list" }
+    methods:  GET
+
+voucher_generate:
+    path:     /voucher/generate
+    defaults: { _controller: "AppBundle:Voucher:generate" }
+    methods:  GET
+
+voucher_redeem:
+    path:     /voucher/redeem/{code}
+    defaults: { _controller: "AppBundle:Voucher:redeem" }
+    methods:  [GET, POST]
+    requirements:
+        code: '\w{13}'
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+# root redirect
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: voucher_index
+        permanent: true

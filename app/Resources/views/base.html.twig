@@ -1,0 +1,35 @@
+{% set route = app.request.get('_route')|replace({'_index': ''}) %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Voucher</title>
+    {% block stylesheets %}
+    {% stylesheets 
+        'css/vendor/*'
+        'css/*'
+        filter='cssrewrite' output='css/compiled/main.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    <div class="wrapper">
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            {% include 'global/menu.html.twig' %}
+        {% endif %}
+        <div class="container-fluid">
+            {% include 'global/flash_msg.html.twig' %}
+            {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}
+        {% javascripts
+            'js/vendor/*'
+            'js/*' output='js/compiled/main.js' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% endblock %}
+    </div>
+</body>
+</html>

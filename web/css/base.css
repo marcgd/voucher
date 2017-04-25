@@ -1,0 +1,11 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #3170a5;
+  color: white;
+  margin-bottom: 30px;
+}
